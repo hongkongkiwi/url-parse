@@ -198,7 +198,7 @@ URL.prototype.toString = function toString(stringify) {
 
   var query
     , url = this
-    , result = url.protocol +'//';
+    , result = url.protocol ? url.protocol+'//' : '';
 
   if (url.username) {
     result += url.username;
